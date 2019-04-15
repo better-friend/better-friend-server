@@ -17,31 +17,33 @@ There are two important databases on the backend that the client will be accessi
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
 |  username    |  string  |     yes      |     username     |
-|  category    |  string  |     yes      |     event type   |
 |  date        |  string  |     yes      |     event date   |
 |  person      |  string  |     yes      |     person       |
-|  relationship|  string  |     yes      |     relation to user |
-|  description |  string  |     no       |     summary      |
+|  message     |  string  |     yes      |     summary      |
+|  phone_number|  string  |     yes      |     phone_number |
+|  sent        |  bool    |     yes      |     sent status |
 
 Example of date JSON object:
 
 ```
 {
+	user_id: 1, 
+	date_id: 1,
 	username: "john123",
-    category: "Birthday",
 	date: "7/7/2017",
 	person: "Lucy",
- 	relationship: "Sister",
-	description: "Purchase painting."
+ 	phone_number: "555-555-5555",
+	message: "Purchase painting."
+	sent: false 
 }
 ```
+
+Note that the user_id and date_id will auto_increment itself. No need to add it manually on the client end. 
 
 #### To get all dates by:
 
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
-* **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
-* **event category** *Get method*: `axios.get(URL/api/dates/:username/:category)`
-* **relationship category** *Get method*: `axios.get(URL/api/dates/:username/:relationship)` 
+* **date_id**: *Get method*: `axios.get(URL/api/dates/:username/:date_id)` 
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
