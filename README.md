@@ -12,41 +12,40 @@ There are two important databases on the backend that the client will be accessi
 
 3. Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
 
+** Dates Database Schema ** 
+
+| **name**     | **type** | **required** |  **description** |
+|--------------|----------|--------------|------------------|
+|  username    |  string  |     yes      |     username     |
+|  category    |  string  |     yes      |     event type   |
+|  date        |  string  |     yes      |     event date   |
+|  person      |  string  |     yes      |     person       |
+|  person      |  string  |     yes      |     relationship |
+|  description |  string  |     no       |     summary      |
+
+Example of date JSON object:
+
+```
+{
+	username: "john123",
+    category: "Birthday",
+	date: "7/7/2017",
+	person: "Lucy",
+ 	relationship: "Sister",
+	description: "Purchase painting."
+}
+```
 
 #### To get all dates for each username, use: 
 
 
 *Get method*: `axios.get(URL/api/dates/:username/)` 
 
-```
-{
-	Id: "",
-	Username: "",
-    Category: "",
-	Date: "",
-	Person_Name: "",
- 	Relationship: "",
-	Description: ""
-}
-```
-
 
 #### To get a date from the username with the id, use: 
 
 
 *Get method*: `axios.get(URL/api/dates/:username/:id)`
-
-```
-{
-	Id: "",
-	Username: "",
-    Category: "",
-	Date: "",
-	Person_Name: "",
- 	Relationship: "",
-	Description: ""
-}
-```
 
 
 #### To get an array dates from the username with the category, use: 
@@ -72,37 +71,12 @@ There are two important databases on the backend that the client will be accessi
 
 *Get method*: `axios.post(URL/api/dates/:username, date)`
 
-```
-{
-	id: "",
-	username: "",
-    category: "",
-	date: "",
-	person: "",
- 	relationship: "",
-	description: ""
-}
-```
 
 
 #### To update an existing date with the ID id, insert the JSON object date, and use: 
 
 
-
 *Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
-
-```
-{
-	id: "",
-	username: "",
-    category: "",
-	date: "",
-	person: "",
- 	relationship: "",
-	description: ""
-}
-```
-
 
 
 #### To delete an existing date with the ID id, use: 
