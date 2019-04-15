@@ -74,13 +74,13 @@ There are two important databases on the backend that the client will be accessi
 
 ```
 {
-	Id: "",
-	Username: "",
-    Category: "",
-	Date: "",
-	Person_Name: "",
- 	Relationship: "",
-	Description: ""
+	id: "",
+	username: "",
+    category: "",
+	date: "",
+	person: "",
+ 	relationship: "",
+	description: ""
 }
 ```
 
@@ -93,13 +93,13 @@ There are two important databases on the backend that the client will be accessi
 
 ```
 {
-	Id: "",
-	Username: "",
-    Category: "",
-	Date: "",
-	Person_Name: "",
- 	Relationship: "",
-	Description: ""
+	id: "",
+	username: "",
+    category: "",
+	date: "",
+	person: "",
+ 	relationship: "",
+	description: ""
 }
 ```
 
@@ -139,7 +139,6 @@ There are two important databases on the backend that the client will be accessi
 }
 ```
 
-If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates specific
-to each username. 
+If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates link specific to each username. 
 
 
