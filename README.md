@@ -17,13 +17,13 @@ axios.get(URL/api/dates/:username/) -> returns an array of all important dates, 
 
 ```
 {
-	Id: 
-	Username
-    Category:
-	Date:
-	Person_Name:
-	Relationship:
-	Description:
+	Id: "",
+	Username: "",
+    Category: "",
+	Date: "",
+	Person_Name: "",
+ 	Relationship: "",
+	Description: ""
 }
 ```
 
@@ -31,13 +31,13 @@ axios.get(URL/api/dates/:username/:id) -> returns a date with the id
 
 ```
 {
-	Id: 
-	Username:
-    Category:
-	Date:
-	Person_Name:
-	Relationship:
-	Description:
+	Id: "",
+	Username: "",
+    Category: "",
+	Date: "",
+	Person_Name: "",
+ 	Relationship: "",
+	Description: ""
 }
 ```
 
@@ -51,13 +51,13 @@ axios.post(URL/api/dates/:username, date) -> inserts the date with the following
 
 ```
 {
-	Id: 
-	Username:
-    Category:
-	Date:
-	Person_Name:
-	Relationship:
-	Description:
+	Id: "",
+	Username: "",
+    Category: "",
+	Date: "",
+	Person_Name: "",
+ 	Relationship: "",
+	Description: ""
 }
 ```
 
@@ -66,13 +66,13 @@ axios.put(URL/api/dates/:username/:id, date) -> retrieve a date with the id, ID,
 
 ```
 {
-	Id: 
-	Username:
-    Category:
-	Date:
-	Person_Name:
-	Relationship:
-	Description:
+	Id: "",
+	Username: "",
+    Category: "",
+	Date: "",
+	Person_Name: "",
+ 	Relationship: "",
+	Description: ""
 }
 ```
 
