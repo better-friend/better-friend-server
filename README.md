@@ -36,6 +36,8 @@ Example of date JSON object:
 }
 ```
 
+Note that user_id and date_id is automatically incremented, so there is no need to add a user_id field on the client end. 
+
 #### To get all dates by:
 
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
