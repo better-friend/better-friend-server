@@ -31,7 +31,7 @@ There are two important databases on the backend that the client will be accessi
 
 #### To get a date from the username with the id, use: 
 
-**Get method**: `axios.get(URL/api/dates/:username/:id)`
+Get method: `axios.get(URL/api/dates/:username/:id)`
 
 ```
 {
@@ -58,7 +58,7 @@ Get method: `axios.get(URL/api/dates/:username/:person)`
 
 #### To insert a date with the username, with the JSON object date, use: 
 
-Get method: `axios.post(URL/api/dates/:username, date)`
+    Get method: `axios.post(URL/api/dates/:username, date)`
 
 ```
 {
