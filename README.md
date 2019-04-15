@@ -1,13 +1,14 @@
 There are two important databases on the backend that the client will be accessing. Dates & Users.
 
-Instructions: 
+**Instructions:** 
 
 For Important Dates:
 
 Use Axios to retrieve the URL (“[serverURL]/api/dates/:username”). Note that you can only access the database of dates by username. 
 Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
 Note that you can only access each of important date if you are logged in, and you have a JSON Web Token that is accessible through local storage.
-Note, you cannot add new usernames into the database. The 
+
+Note, you cannot add new usernames into the database. The database will check for 
 
 axios.get(URL/api/dates/:username/) -> returns an array of all important dates, with each date carrying the following data on the body.
 
