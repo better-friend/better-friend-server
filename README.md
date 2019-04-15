@@ -47,7 +47,7 @@ Example of date JSON object:
 
 #### To insert a date with the username, with the JSON object date, use: 
 
-* *Get method*: `axios.post(URL/api/dates/:username, date)`
+* *Post method*: `axios.post(URL/api/dates/:username, date)`
 
 #### To update an existing date with the ID id, insert the JSON object date, and use: 
 
@@ -56,8 +56,6 @@ Example of date JSON object:
 #### To delete an existing date with the ID id, use: 
 
 * *Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
-
-
 
 ## For Users: 
 
