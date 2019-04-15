@@ -12,7 +12,7 @@ There are two important databases on the backend that the client will be accessi
 
 3. Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
 
-**Dates Database Schema** 
+### **Dates Database Schema** 
 
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
@@ -62,7 +62,7 @@ Example of date JSON object:
 1. Use Axios to retrieve the URL `(“[serverURL]/api/iusers”)`;
 2. Use the appropriate Axios package manager CRUD method to registering and sign-in. 
 
-**Users Database Schema** 
+### **Users Database Schema** 
 
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
