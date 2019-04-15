@@ -41,7 +41,7 @@ Example of date JSON object:
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
 * **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
 * **event category** *Get method*: `axios.get(URL/api/dates/:username/:category)`
-* **relationship category** *Get method*: `axio.get(URL/api/dates/:username/:relationship)` 
+* **relationship category** *Get method*: `axios.get(URL/api/dates/:username/:relationship)` 
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
 
 
