@@ -26,7 +26,7 @@ function getDateByDateId(username, date_id){
 
 function getDatesByPersonName(username, person) {
     let user_id = getUserId(username);
-    return db("dates").where({"user_id": user_id, "person": person});
+    return db("dates").where({"user_id": user_id, "personToSendMessageTo": person});
 }
 
 function insertDate(username, dateData) {
