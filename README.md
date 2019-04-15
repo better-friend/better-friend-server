@@ -45,6 +45,7 @@ Example of date JSON object:
 * **event category** *Get method*: `axios.get(URL/api/dates/:username/:category)`
 * **relationship category** *Get method*: `axios.get(URL/api/dates/:username/:relationship)` 
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
+* **sent status** *Get method*: `axios.get(URL/api/dates/:username/:sent)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
