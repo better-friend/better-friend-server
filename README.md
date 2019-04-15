@@ -81,7 +81,7 @@ Note that user_id is automatically incremented, so there is no need to add a use
 
 #### For registering users: 
 
-*Post method*: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
+*Post method*: `axios.post(“[serverURL]/api/users”, userInfo)` 
 
 #### For login with a username and password:
 

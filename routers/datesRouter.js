@@ -10,8 +10,8 @@ router.get("/:username", restricted, (req,res) => {
     let username = req.params.username;
     
     db.getAllDatesByUsername(username)
-    .then()
-    .catch()
+    .then((result) => res.status(200).json(result))
+    .catch(err => res.status(400).json({errorMessage: "We could not find the data with this username"}))
 })
 
 router.get("/:username/:date_id", restricted, (req,res) => {
