@@ -10,15 +10,7 @@ router.get("/:username", restricted, (req,res) => {
 
 })
 
-router.get("/:username/:id", restricted, (req,res) => {
-    
-})
-
-router.get("/:username/:category", restricted, (req,res) => {
-    
-})
-
-router.get("/:username/:relationship", restricted, (req,res) => {
+router.get("/:username/:date_id", restricted, (req,res) => {
     
 })
 
@@ -30,11 +22,11 @@ router.post("/:username/", restricted, (req,res) => {
     
 })
 
-router.put("/:username/:id", restricted, (req,res) => {
+router.put("/:username/:date_id", restricted, (req,res) => {
     
 })
 
-router.delete("/:username/:id", restricted (req,res) => {
+router.delete("/:username/:date_id", restricted, (req,res) => {
     
 })
 
