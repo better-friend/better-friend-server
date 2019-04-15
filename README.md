@@ -16,7 +16,7 @@ There are two important databases on the backend that the client will be accessi
 #### To get all dates for each username, use: 
 
 
-**Get method**: `axios.get(URL/api/dates/:username/)` 
+*Get method*: `axios.get(URL/api/dates/:username/)` 
 
 ```
 {
@@ -34,7 +34,7 @@ There are two important databases on the backend that the client will be accessi
 #### To get a date from the username with the id, use: 
 
 
-Get method: `axios.get(URL/api/dates/:username/:id)`
+*Get method*: `axios.get(URL/api/dates/:username/:id)`
 
 ```
 {
@@ -52,25 +52,25 @@ Get method: `axios.get(URL/api/dates/:username/:id)`
 #### To get an array dates from the username with the category, use: 
 
 
-Get method: `axios.get(URL/api/dates/:username/:category)`
+*Get method*: `axios.get(URL/api/dates/:username/:category)`
 
 
 #### To get an array of dates from the username with the relationship type, use: 
 
 
-Get method: `axio.get(URL/api/dates/:username/:relationship)` 
+*Get method*: `axio.get(URL/api/dates/:username/:relationship)` 
 
 
 #### To get an array of dates from the specific person, use: 
 
 
-Get method: `axios.get(URL/api/dates/:username/:person)` 
+*Get method*: `axios.get(URL/api/dates/:username/:person)` 
 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
 
-Get method: `axios.post(URL/api/dates/:username, date)`
+*Get method*: `axios.post(URL/api/dates/:username, date)`
 
 ```
 {
@@ -89,7 +89,7 @@ Get method: `axios.post(URL/api/dates/:username, date)`
 
 
 
-Put method: `axios.put(URL/api/dates/:username/:id, date)` 
+*Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
 
 ```
 {
@@ -108,7 +108,7 @@ Put method: `axios.put(URL/api/dates/:username/:id, date)`
 #### To delete an existing date with the ID id, use: 
 
 
-Delete method:  `axios.delete(URL/api/dates/:username/:id)` 
+*Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
 
 
 
@@ -119,7 +119,7 @@ Delete method:  `axios.delete(URL/api/dates/:username/:id)`
 
 ### For registering users: 
 
-Post method: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
+*Post method*: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
 
 ```
 {
@@ -130,7 +130,7 @@ Post method: `axios.post(“[serverURL]/api/iusers”, userInfo)`
 
 ### For login with a username and password:
 
-Get method: `axios.get(“[serverURL]/api/users”, userInfo)` 
+*Get method*: `axios.get(“[serverURL]/api/users”, userInfo)` 
 
 ```
 {
