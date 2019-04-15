@@ -77,7 +77,9 @@ Example of userInfo JSON object:
 	password: "blahblahblah"
 }
 ```
+
 Note that user_id is automatically incremented, so there is no need to add a user_id field on the client end. 
+
 
 #### For registering users: 
 
