@@ -69,11 +69,11 @@ Example of date JSON object:
 |  username    |  string  |     yes      |     username     |
 |  password    |  string  |     yes      |     password     |
 
-### For registering users: 
+#### For registering users: 
 
 *Post method*: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
 
-### For login with a username and password:
+#### For login with a username and password:
 
 *Get method*: `axios.get(“[serverURL]/api/users”, userInfo)` 
 
