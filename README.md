@@ -20,6 +20,7 @@ There are two important databases on the backend that the client will be accessi
 |  category    |  string  |     yes      |     event type   |
 |  date        |  string  |     yes      |     event date   |
 |  person      |  string  |     yes      |     person       |
+|  phone_number | string |      yes      |    phone number |
 |  relationship|  string  |     yes      |     relation to user |
 |  messsage |  string  |     yes      |     summary      |
 |  sent 	   |  bool    |     yes       |     sent status      |
@@ -32,6 +33,7 @@ Example of date JSON object:
     category: "Birthday",
 	date: "7/7/2017",
 	person: "Lucy",
+	phone: "555-555-5555",
  	relationship: "Sister",
 	message: "Purchase painting."
 	sent: false
