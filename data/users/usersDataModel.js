@@ -1,3 +1,4 @@
+
 const db = require("../dbConfig.js");
 
 module.exports = {
@@ -5,10 +6,10 @@ module.exports = {
     login
 }
 
-function register() {
-
+function register(userData) {
+    return db("users").insert(userData);
 }
 
-function login() {
-
+function login(username, password) {
+    return db("users").where({"username": username, "password": password});
 }
