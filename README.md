@@ -12,7 +12,7 @@ There are two important databases on the backend that the client will be accessi
 
 3. Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
 
-** Dates Database Schema ** 
+**Dates Database Schema** 
 
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
