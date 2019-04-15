@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "knex": "^0.16.5"
+  },
+  "name": "better-friend-server",
+  "version": "1.0.0",
+  "description": "\"BackEnd API Server for Friend Reminders\"",
+  "main": "index.js",
+  "repository": "https://github.com/better-friend/better-friend-server.git",
+  "author": "Francis Chen <fncis.chen@gmail.com>",
+  "license": "MIT"
+}
