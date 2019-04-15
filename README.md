@@ -44,7 +44,6 @@ Example of date JSON object:
 * **relationship category** *Get method*: `axios.get(URL/api/dates/:username/:relationship)` 
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
 
-
 #### To insert a date with the username, with the JSON object date, use: 
 
 * *Post method*: `axios.post(URL/api/dates/:username, date)`
@@ -79,4 +78,12 @@ Example of date JSON object:
 
 If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates link specific to each username. 
 
+## **HTML Status Codes**:
 
+* **400 Status**: Bad request. You are missing a data field. 
+* **401 Status**: Not authorized due to lack of username or password.
+
+* **200 Status**: Accepted data creation! 
+* **202 Status**: Accepted data request! 
+
+* **500 Status**: Intenal server error.
