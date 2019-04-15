@@ -22,7 +22,7 @@ There are two important databases on the backend that the client will be accessi
 |  person      |  string  |     yes      |     person       |
 |  relationship|  string  |     yes      |     relation to user |
 |  messsage |  string  |     yes      |     summary      |
-|  sent 	   |  bool    |     yes       |     summary      |
+|  sent 	   |  bool    |     yes       |     sent status      |
 
 Example of date JSON object:
 
