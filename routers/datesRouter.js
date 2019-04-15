@@ -62,18 +62,6 @@ router.delete("/:username/:date_id", restricted, (req,res) => {
     .catch(err => res.status(500).json({errorMessage: "The server has issues uploading data"}))
 })
 
-let payload = {
-    username: user.username,
-    password: user.password 
-  }
 
-  let secretKey = "mySecretKey"; 
-
-  let signOptions = {
-    expiresIn: "24h",
-  }; 
-
-  return jwt.sign(payload,secretKey,signOptions);
-}
 
 module.exports = router;
