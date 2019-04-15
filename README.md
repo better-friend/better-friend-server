@@ -36,53 +36,26 @@ Example of date JSON object:
 }
 ```
 
-#### To get all dates for each username, use: 
+#### To get all dates by:
 
-
-*Get method*: `axios.get(URL/api/dates/:username/)` 
-
-
-#### To get a date from the username with the id, use: 
-
-
-*Get method*: `axios.get(URL/api/dates/:username/:id)`
-
-
-#### To get an array dates from the username with the category, use: 
-
-
-*Get method*: `axios.get(URL/api/dates/:username/:category)`
-
-
-#### To get an array of dates from the username with the relationship type, use: 
-
-
-*Get method*: `axio.get(URL/api/dates/:username/:relationship)` 
-
-
-#### To get an array of dates from the specific person, use: 
-
-
-*Get method*: `axios.get(URL/api/dates/:username/:person)` 
+* **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
+* **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
+* **event category** *Get method*: `axios.get(URL/api/dates/:username/:category)`
+* **relationship category** *Get method*: `axio.get(URL/api/dates/:username/:relationship)` 
+* **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
-
-*Get method*: `axios.post(URL/api/dates/:username, date)`
-
-
+* *Get method*: `axios.post(URL/api/dates/:username, date)`
 
 #### To update an existing date with the ID id, insert the JSON object date, and use: 
 
-
-*Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
-
+* *Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
 
 #### To delete an existing date with the ID id, use: 
 
-
-*Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
+* *Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
 
 
 
