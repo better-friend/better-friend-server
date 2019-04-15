@@ -1,5 +1,6 @@
 const express = require("express");
 const server = express();
+const cors = require("cors");
 
 const datesRouter = require("./routers/datesRouter.js");
 const usersRouter = require("./routers/usersRouter.js");
