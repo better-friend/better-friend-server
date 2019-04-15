@@ -19,44 +19,41 @@ There are two important databases on the backend that the client will be accessi
 |  username    |  string  |     yes      |     username     |
 |  date        |  string  |     yes      |     event date   |
 |  person      |  string  |     yes      |     person       |
-|  message     |  string  |     yes      |     summary      |
-|  phone_number|  string  |     yes      |     phone_number |
-|  sent        |  bool    |     yes      |     sent status |
+|  phone_number | string |      yes      |    phone number |
+|  messsage |  string  |     yes      |     summary      |
+|  sent 	   |  bool    |     yes       |     sent status      |
 
 Example of date JSON object:
 
 ```
 {
-	user_id: 1, 
-	date_id: 1,
 	username: "john123",
 	date: "7/7/2017",
 	person: "Lucy",
- 	phone_number: "555-555-5555",
+	phone: "555-555-5555",
 	message: "Purchase painting."
-	sent: false 
+	sent: false
 }
 ```
-
-Note that the user_id and date_id will auto_increment itself. No need to add it manually on the client end. 
 
 #### To get all dates by:
 
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
-* **date_id**: *Get method*: `axios.get(URL/api/dates/:username/:date_id)` 
+* **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
+* **sent status** *Get method*: `axios.get(URL/api/dates/:username/:sent)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
 * *Post method*: `axios.post(URL/api/dates/:username, date)`
 
-#### To update an existing date with the username & date_id, insert the JSON object date, and use: 
+#### To update an existing date with the ID id, insert the JSON object date, and use: 
 
-* *Put method*: `axios.put(URL/api/dates/:username/:date_id, date)` 
+* *Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
 
-#### To delete an existing date with the username & date_id, use: 
+#### To delete an existing date with the ID id, use: 
 
-* *Delete method*:  `axios.delete(URL/api/dates/:username/:date_id)` 
+* *Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
 
 ## For Users: 
 
@@ -75,10 +72,12 @@ Example of userInfo JSON object:
 
 ```
 {
+	user_id: 1,
 	username: "john123",
 	password: "blahblahblah"
 }
 ```
+Note that user_id is automatically incremented, so there is no need to add a user_id field on the client end. 
 
 #### For registering users: 
 
