@@ -1,8 +1,10 @@
+# Better-Friends-Server // Back End API Server Documentation 
+
 There are two important databases on the backend that the client will be accessing. Dates & Users.
 
 ## Instructions: 
 
-For Important Dates:
+### For Important Dates:
 
 Use Axios to retrieve the URL (“[serverURL]/api/dates/:username”). Note that you can only access the database of dates by username. 
 Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
@@ -70,7 +72,7 @@ Returns a JSON message indicating success or error of updating the ID
 axios.delete(URL/api/dates/:username/:id) -> Delete an important date, with the id ID, and returns a JSON message indicating success or error of deleting the date. 
 
 
-For Users: 
+### For Users: 
 
 Use Axios to retrieve the URL (“[serverURL]/api/iusers”);
 Use the appropriate Axios package manager CRUD method to 
