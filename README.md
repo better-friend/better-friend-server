@@ -50,11 +50,11 @@ Note that the user_id and date_id will auto_increment itself. No need to add it 
 
 * *Post method*: `axios.post(URL/api/dates/:username, date)`
 
-#### To update an existing date with the ID id, insert the JSON object date, and use: 
+#### To update an existing date with the username & date_id, insert the JSON object date, and use: 
 
 * *Put method*: `axios.put(URL/api/dates/:username/:date_id, date)` 
 
-#### To delete an existing date with the ID id, use: 
+#### To delete an existing date with the username & date_id, use: 
 
 * *Delete method*:  `axios.delete(URL/api/dates/:username/:date_id)` 
 
