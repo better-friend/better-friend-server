@@ -62,27 +62,20 @@ Example of date JSON object:
 1. Use Axios to retrieve the URL `(“[serverURL]/api/iusers”)`;
 2. Use the appropriate Axios package manager CRUD method to registering and sign-in. 
 
+**Users Database Schema** 
+
+| **name**     | **type** | **required** |  **description** |
+|--------------|----------|--------------|------------------|
+|  username    |  string  |     yes      |     username     |
+|  password    |  string  |     yes      |     password     |
+
 ### For registering users: 
 
 *Post method*: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
 
-```
-{
-	username: “”,
-	password: “”
-}
-```
-
 ### For login with a username and password:
 
 *Get method*: `axios.get(“[serverURL]/api/users”, userInfo)` 
-
-```
-{
-	username: “”,
-	password: “”
-}
-```
 
 If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates link specific to each username. 
 
