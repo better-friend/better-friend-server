@@ -17,11 +17,9 @@ There are two important databases on the backend that the client will be accessi
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
 |  username    |  string  |     yes      |     username     |
-|  category    |  string  |     yes      |     event type   |
 |  date        |  string  |     yes      |     event date   |
 |  person      |  string  |     yes      |     person       |
 |  phone_number | string |      yes      |    phone number |
-|  relationship|  string  |     yes      |     relation to user |
 |  messsage |  string  |     yes      |     summary      |
 |  sent 	   |  bool    |     yes       |     sent status      |
 
@@ -30,11 +28,9 @@ Example of date JSON object:
 ```
 {
 	username: "john123",
-    category: "Birthday",
 	date: "7/7/2017",
 	person: "Lucy",
 	phone: "555-555-5555",
- 	relationship: "Sister",
 	message: "Purchase painting."
 	sent: false
 }
@@ -44,8 +40,6 @@ Example of date JSON object:
 
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
 * **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
-* **event category** *Get method*: `axios.get(URL/api/dates/:username/:category)`
-* **relationship category** *Get method*: `axios.get(URL/api/dates/:username/:relationship)` 
 * **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
 * **sent status** *Get method*: `axios.get(URL/api/dates/:username/:sent)` 
 
