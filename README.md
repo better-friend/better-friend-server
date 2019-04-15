@@ -20,7 +20,7 @@ There are two important databases on the backend that the client will be accessi
 |  category    |  string  |     yes      |     event type   |
 |  date        |  string  |     yes      |     event date   |
 |  person      |  string  |     yes      |     person       |
-|  person      |  string  |     yes      |     relationship |
+|  relationship|  string  |     yes      |     relation to user |
 |  description |  string  |     no       |     summary      |
 
 Example of date JSON object:
