@@ -1,3 +1,5 @@
+const db = require("../dbConfig.js");
+
 module.exports = {
     getAllDatesByUsername,
     getDatesById,
@@ -33,11 +35,11 @@ function insertDate(username, dateData) {
 
 }
 
-function updateDate(username, dateData) {
+function updateDate(username, id, dateData) {
     
 }
 
-function deleteDate(username, dateData) {
+function deleteDate(username, id, dateData) {
     
 }
 

@@ -1,6 +1,16 @@
 const express = require("express");
-const server = express();
+const router = express();
 
-server.use(express.json());
+const authenticate = require("../middleware/authenticationMiddleware.js");
 
-module.exports = server;
+router.use(express.json());
+
+router.post("/register",(req,res) => {
+
+})
+
+router.get("/login", authenticate, (req,res)=> {
+
+})
+
+module.exports = router;
