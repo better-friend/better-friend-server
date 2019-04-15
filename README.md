@@ -29,9 +29,7 @@ There are two important databases on the backend that the client will be accessi
 }
 ```
 
-### To get a date from the username with the id:
-
-`axios.get(URL/api/dates/:username/:id)`
+### To get a date from the username with the id: `axios.get(URL/api/dates/:username/:id)`
 
 ```
 {
