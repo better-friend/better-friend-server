@@ -58,7 +58,7 @@ Example of date JSON object:
 
 ## For Users: 
 
-1. Use Axios to retrieve the URL `(“[serverURL]/api/iusers”)`;
+1. Use Axios to retrieve the URL `(“[serverURL]/api/users”)`;
 2. Use the appropriate Axios package manager CRUD method to registering and sign-in. 
 
 ### **Users Database Schema** 
@@ -67,6 +67,16 @@ Example of date JSON object:
 |--------------|----------|--------------|------------------|
 |  username    |  string  |     yes      |     username     |
 |  password    |  string  |     yes      |     password     |
+
+
+Example of userInfo JSON object:
+
+```
+{
+	username: "john123",
+	password: "blahblahblah"
+}
+```
 
 #### For registering users: 
 
