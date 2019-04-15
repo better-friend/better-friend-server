@@ -19,7 +19,7 @@ function getAllDatesByUsername(username){
     return db("dates").where("user_id", user_id);
 }
 
-function getDatesById(username, date_id){
+function getDateByDateId(username, date_id){
     let user_id = getUserId(username);
     return db("dates").where({"user_id": user_id, "date_id": date_id});
 }
@@ -29,7 +29,7 @@ function getDatesByPersonName(username, person) {
     return db("dates").where({"user_id": user_id, "person": person});
 }
 
-function insertDate(dateData) {
+function insertDate(username, dateData) {
     
     let user_id = getUserId(username);
     dateData.user_id = user_id; 
@@ -45,7 +45,7 @@ function updateDate(username, date_id, dateData) {
 
 function deleteDate(username, id) {
     let user_id = getUserId(username);
-    
+
     return db("dates").where({"user_id": user_id, "id": id})
 }
 
