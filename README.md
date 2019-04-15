@@ -22,6 +22,7 @@ There are two important databases on the backend that the client will be accessi
 |  person      |  string  |     yes      |     person       |
 |  relationship|  string  |     yes      |     relation to user |
 |  description |  string  |     no       |     summary      |
+|  sent 	   |  bool    |     yes       |     summary      |
 
 Example of date JSON object:
 
@@ -33,6 +34,7 @@ Example of date JSON object:
 	person: "Lucy",
  	relationship: "Sister",
 	description: "Purchase painting."
+	sent: false
 }
 ```
 
