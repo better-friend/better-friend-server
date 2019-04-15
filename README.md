@@ -13,9 +13,7 @@ There are two important databases on the backend that the client will be accessi
 3. Use the appropriate Axios package manager CRUD method to access / retrieve / post update / delete the appropriate data.
 
 
-### To get all dates for each username:
-
-`axios.get(URL/api/dates/:username/)` -> returns an array of all important dates, with each date carrying the following data on the body.
+### To get all dates for each username, use: `axios.get(URL/api/dates/:username/)` 
 
 ```
 {
@@ -29,7 +27,7 @@ There are two important databases on the backend that the client will be accessi
 }
 ```
 
-### To get a date from the username with the id: `axios.get(URL/api/dates/:username/:id)`
+### To get a date from the username with the id, use: `axios.get(URL/api/dates/:username/:id)`
 
 ```
 {
@@ -42,21 +40,13 @@ There are two important databases on the backend that the client will be accessi
 	Description: ""
 }
 ```
-### To get an array dates from the username with the category, use:
+### To get an array dates from the username with the category, use: `axios.get(URL/api/dates/:username/:category)`
 
-`axios.get(URL/api/dates/:username/:category)`
+### To get an array of dates from the username with the relationship type, use: `axio.get(URL/api/dates/:username/:relationship)` 
 
-### To get an array of dates from the username with the relationship type, use:
+### To get an array of dates from the specific person, use: `axios.get(URL/api/dates/:username/:person)` 
 
-`axio.get(URL/api/dates/:username/:relationship)` -> returns an array of dates by your relationship with the person
-
-### To get an array of dates from the specific person, use:
-
-`axios.get(URL/api/dates/:username/:person)` -> returns the dates corresponding to the person 
-
-### To insert a date with the username, with the JSON object date, use:
-
-`axios.post(URL/api/dates/:username, date)`
+### To insert a date with the username, with the JSON object date, use: `axios.post(URL/api/dates/:username, date)`
 
 ```
 {
@@ -69,9 +59,7 @@ There are two important databases on the backend that the client will be accessi
 	Description: ""
 }
 ```
-### To update an existing date with the ID id, insert the JSON object date:
-
-`axios.put(URL/api/dates/:username/:id, date)` -> retrieve a date with the id, ID, and insert the following JSON object onto date:
+### To update an existing date with the ID id, insert the JSON object date: `axios.put(URL/api/dates/:username/:id, date)` 
 
 ```
 {
@@ -85,9 +73,7 @@ There are two important databases on the backend that the client will be accessi
 }
 ```
 
-### To delete an existing date with the ID id, use: 
-
-`axios.delete(URL/api/dates/:username/:id)` -> Delete an important date, with the id ID, and returns a JSON message indicating success or error of deleting the date. 
+### To delete an existing date with the ID id, use:  `axios.delete(URL/api/dates/:username/:id)` 
 
 
 ## For Users: 
