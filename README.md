@@ -58,7 +58,7 @@ Get method: `axios.get(URL/api/dates/:username/:person)`
 
 #### To insert a date with the username, with the JSON object date, use: 
 
-    Get method: `axios.post(URL/api/dates/:username, date)`
+Get method: `axios.post(URL/api/dates/:username, date)`
 
 ```
 {
