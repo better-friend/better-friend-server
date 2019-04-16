@@ -8,7 +8,7 @@ var cors = require('cors');
 
 router.post("/register", (req,res) => {
     let {username, password} = req.body; 
-    let hashedPassword = bcrypt.hashSync(password, 32);
+    let hashedPassword = bcrypt.hashSync(password, 12);
 
     if(!username || !password){
         return res.status(404).json({errorMessage: "You are missing a username or password!"})
@@ -28,14 +28,13 @@ router.post("/register", (req,res) => {
 router.get("/login", (req,res) => {
 
     let {username, password} = req.body; 
-
+    
     db.login(username).then(
         user => {
     
           if(user && bcrypt.compareSync(password,user.password) )  {
             let token = generateToken(user);
-    
-            localStorage.setItem(userToken, token); 
+     
             console.log("You've logged in!");
             res.status(200).send(token);
           }
