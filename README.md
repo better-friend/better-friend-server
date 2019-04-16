@@ -18,7 +18,7 @@ There are two important databases on the backend that the client will be accessi
 |--------------|----------|--------------|------------------|
 |  username    |  string  |     yes      |     username     |
 |  date        |  string  |     yes      |     event date   |
-|  person      |  string  |     yes      |     person       |
+|  personToSendMessageTo    |  string  |     yes      |     person       |
 |  phone_number | string |      yes      |    phone number |
 |  messsage |  string  |     yes      |     summary      |
 |  sent 	   |  bool    |     yes       |     sent status      |
@@ -29,18 +29,20 @@ Example of date JSON object:
 {
 	username: "john123",
 	date: "7/7/2017",
-	person: "Lucy",
+	personToSendMessageTo: "Lucy",
 	phone: "555-555-5555",
 	message: "Purchase painting."
 	sent: false
 }
 ```
 
+Note that user_id and date_id is automatically incremented, so there is no need to add a user_id field on the client end. 
+
 #### To get all dates by:
 
 * **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
-* **id**: *Get method*: `axios.get(URL/api/dates/:username/:id)`
-* **person name** *Get method*: `axios.get(URL/api/dates/:username/:person)` 
+* **id**: *Get method*: `axios.get(URL/api/dates/:username/:date_id)`
+* **person name** *Get method*: `axios.get(URL/api/dates/:username/:personToSendMessageTo)` 
 * **sent status** *Get method*: `axios.get(URL/api/dates/:username/:sent)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
@@ -72,14 +74,18 @@ Example of userInfo JSON object:
 
 ```
 {
+	user_id: 1,
 	username: "john123",
 	password: "blahblahblah"
 }
 ```
 
+Note that user_id is automatically incremented, so there is no need to add a user_id field on the client end. 
+
+
 #### For registering users: 
 
-*Post method*: `axios.post(“[serverURL]/api/iusers”, userInfo)` 
+*Post method*: `axios.post(“[serverURL]/api/users”, userInfo)` 
 
 #### For login with a username and password:
 
