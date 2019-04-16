@@ -1,7 +1,7 @@
 const db = require("../dbConfig.js");
 
 module.exports = {
-    getAllDatesByUsername,
+    getAllDatesByUserId,
     getDatesByDateId,
     getDatesByPersonName,
     insertDate,
@@ -9,42 +9,30 @@ module.exports = {
     deleteDate
 }
 
-function getUserId(username) {
-    let user_id = db("users").where("username", dateData.username).first().user_id;
-    return user_id; 
-}
-
-function getAllDatesByUsername(username){
-    let user_id = getUserId(username);
+function getAllDatesByUserId(user_id){
+    console.log(db("dates").where("user_id", user_id));
     return db("dates").where("user_id", user_id);
 }
 
-function getDatesByDateId(username, date_id){
-    let user_id = getUserId(username);
+function getDatesByDateId(user_id, date_id){
     return db("dates").where({"user_id": user_id, "date_id": date_id});
 }
 
-function getDatesByPersonName(username, person) {
-    let user_id = getUserId(username);
+function getDatesByPersonName(user_id, person) {
     return db("dates").where({"user_id": user_id, "personToSendMessageTo": person});
 }
 
-function insertDate(username, dateData) {
+function insertDate(dateData) {
     
-    let user_id = getUserId(username);
-    dateData.user_id = user_id; 
-
     return db("dates").insert(dateData);
 }
 
-function updateDate(username, date_id, dateData) {
+function updateDate(user_id, date_id, dateData) {
 
-    let user_id = getUserId(username);
     return db("dates").where({"user_id": user_id, "date_id": date_id}).insert(dateData);
 }
 
-function deleteDate(username, id) {
-    let user_id = getUserId(username);
+function deleteDate(user_id, date_id) {
 
-    return db("dates").where({"user_id": user_id, "id": id})
+    return db("dates").where({"user_id": user_id, "date_id": date_id})
 }

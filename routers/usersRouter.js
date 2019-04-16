@@ -36,7 +36,7 @@ router.get("/login", (req,res) => {
             let token = generateToken(user);
      
             console.log("You've logged in!");
-            res.status(200).send(token);
+            res.status(200).json({user_id: user.user_id, username: user.username, token: token});
           }
           else {
             res.status(401).json({errorMessage: "Incorrect password entered. Pleae enter a different password"})

@@ -7,7 +7,7 @@ const jwtKey =
 module.exports = restricted;
   
 function restricted(req, res, next) {
-  const token = localStorage.getItem(userToken); 
+  const token = req.headers.token; 
 
   if (token) {
     jwt.verify(token, jwtKey, (err, decoded) => {
