@@ -1,6 +1,7 @@
 const express = require("express");
 const server = express();
 var cors = require('cors')
+var moment = require('moment');
 
 const http = require('http');
 
@@ -18,12 +19,11 @@ const app = http.createServer((req, res) => {
 server.use(express.json());
 server.use(cors());
 
-res.setHeader('Content-Type', 'text/html');
-res.end('<h1>Hello World</h1>');
+const port = process.env.PORT || 5000;
 
 server.use("/dates", datesRouter);
 server.use("/users", usersRouter);
 
-server.listen(5000, () => {
+server.listen(port, () => {
     console.log("We are in the server!");
 })
