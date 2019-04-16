@@ -2,6 +2,8 @@ const router = require('express').Router();
 
 const db = require("../data/dates/datesDataModel");
 const restricted = require("../middleware/restrictedMiddleware.js");
+var cors = require('cors')
+
 
 router.get("/:username", restricted, (req,res) => {
     let username = req.params.username;

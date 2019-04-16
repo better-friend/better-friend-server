@@ -3,6 +3,8 @@ const router = require('express').Router();
 const bcrypt = require("bcryptjs");
 const db = require("../data/users/usersDataModel.js");
 const jwt = require('jsonwebtoken');
+var cors = require('cors');
+
 
 router.post("/register", (req,res) => {
     let {username, password} = req.body; 
