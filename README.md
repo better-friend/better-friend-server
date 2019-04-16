@@ -6,7 +6,7 @@ There are two important databases on the backend that the client will be accessi
 
 ## For Important Dates:
 
-1. Use Axios to retrieve the URL `(“[serverURL]/api/dates/:username”)`. 
+1. Use Axios to retrieve the URL `(“https://better-friend-server.herokuapp.com/dates/:user_id”)`. 
 
 2. Note that you can only access the database of **dates** by **username**, and after making a sign-in request to the server. 
 
@@ -40,26 +40,25 @@ Note that user_id and date_id is automatically incremented, so there is no need 
 
 #### To get all dates by:
 
-* **username**: *Get method*: `axios.get(URL/api/dates/:username/)` 
-* **id**: *Get method*: `axios.get(URL/api/dates/:username/:date_id)`
-* **person name** *Get method*: `axios.get(URL/api/dates/:username/:personToSendMessageTo)` 
-* **sent status** *Get method*: `axios.get(URL/api/dates/:username/:sent)` 
+* **user id**: *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/")` 
+* **person name** *Get method*: `axios.get("https://better-friend-server.herokuapp.com/api/dates/:user_id/:person)` 
+* **sent status** *Get method*: `axios.get(URL/api/dates/:user_id/:sent)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
-* *Post method*: `axios.post(URL/api/dates/:username, date)`
+* *Post method*: `axios.post("https://better-friend-server.herokuapp.com/dates/:user_id", date)`
 
 #### To update an existing date with the ID id, insert the JSON object date, and use: 
 
-* *Put method*: `axios.put(URL/api/dates/:username/:id, date)` 
+* *Put method*: `axios.put("https://better-friend-server.herokuapp.com/dates/:user_id/:date_id", date)` 
 
 #### To delete an existing date with the ID id, use: 
 
-* *Delete method*:  `axios.delete(URL/api/dates/:username/:id)` 
+* *Delete method*:  `axios.delete("https://better-friend-server.herokuapp.com/dates/:username/:id")` 
 
 ## For Users: 
 
-1. Use Axios to retrieve the URL `(“[serverURL]/api/users”)`;
+1. Use Axios to retrieve the URL `(“https://better-friend-server.herokuapp.com/users”)`;
 2. Use the appropriate Axios package manager CRUD method to registering and sign-in. 
 
 ### **Users Database Schema** 
@@ -85,11 +84,11 @@ Note that user_id is automatically incremented, so there is no need to add a use
 
 #### For registering users: 
 
-*Post method*: `axios.post(“[serverURL]/api/users”, userInfo)` 
+*Post method*: `axios.post(“https://better-friend-server.herokuapp.com/users”, userInfo)` 
 
 #### For login with a username and password:
 
-*Get method*: `axios.get(“[serverURL]/api/users”, userInfo)` 
+*Get method*: `axios.get(“https://better-friend-server.herokuapp.com/users”, userInfo)` 
 
 If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates link specific to each username. 
 
