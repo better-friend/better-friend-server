@@ -4,9 +4,7 @@ const jwtKey =
   process.env.JWT_SECRET || "mySecretKey"
   'add a .env file to root of project with the JWT_SECRET variable';
 
-module.exports = {
-    restricted,
-  };
+module.exports = restricted;
   
 function restricted(req, res, next) {
   const token = localStorage.getItem(userToken); 

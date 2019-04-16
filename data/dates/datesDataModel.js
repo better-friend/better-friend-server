@@ -2,7 +2,7 @@ const db = require("../dbConfig.js");
 
 module.exports = {
     getAllDatesByUsername,
-    getDatesById,
+    getDatesByDateId,
     getDatesByPersonName,
     insertDate,
     updateDate,
@@ -19,7 +19,7 @@ function getAllDatesByUsername(username){
     return db("dates").where("user_id", user_id);
 }
 
-function getDateByDateId(username, date_id){
+function getDatesByDateId(username, date_id){
     let user_id = getUserId(username);
     return db("dates").where({"user_id": user_id, "date_id": date_id});
 }

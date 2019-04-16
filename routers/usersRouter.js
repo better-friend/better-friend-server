@@ -1,24 +1,23 @@
-const express = require("express");
-const router = express();
+const router = require('express').Router();
 
 const bcrypt = require("bcryptjs");
-const db = require("../data/users/usersDataModel");
+const db = require("../data/users/usersDataModel.js");
 const jwt = require('jsonwebtoken');
-
-const authenticate = require("../middleware/authenticationMiddleware.js");
-
-router.use(express.json());
 
 router.post("/register", (req,res) => {
     let {username, password} = req.body; 
     let hashedPassword = bcrypt.hashSync(password, 32);
 
-    if(!username || !hashedPassword){
+    if(!username || !password){
         return res.status(404).json({errorMessage: "You are missing a username or password!"})
     }
 
     else {
-        db.register({username, hashedPassword})
+        let user = {
+          "username": username,
+          "password": hashedPassword 
+        }
+        db.register(user)
             .then(() => res.status(202).json({message: "Successful register!"}))
             .catch(() => res.status(500).json({message: "There was a server error to accessing our database"}));
     }

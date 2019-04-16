@@ -1,10 +1,7 @@
-const express = require("express");
-const router = express();
+const router = require('express').Router();
 
 const db = require("../data/dates/datesDataModel");
 const restricted = require("../middleware/restrictedMiddleware.js");
-
-router.use(express.json());
 
 router.get("/:username", restricted, (req,res) => {
     let username = req.params.username;
@@ -12,6 +9,7 @@ router.get("/:username", restricted, (req,res) => {
     db.getAllDatesByUsername(username)
     .then((result) => res.status(200).json(result.data))
     .catch(err => res.status(400).json({errorMessage: "We could not find the dates with this username"}))
+
 })
 
 router.get("/:username/:date_id", restricted, (req,res) => {

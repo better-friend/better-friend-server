@@ -7,7 +7,7 @@ module.exports = {
 }
 
 function register(userData) {
-    return db("users").insert(userData);
+    return db("users").insert({"username": userData.username, "password": userData.password});
 }
 
 function login(username) {
