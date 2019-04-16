@@ -51,16 +51,19 @@ router.post("/:user_id", restricted, (req,res) => {
     else {
         db.insertDate(dateData)
         .then((result) => res.status(200).json({message: "Successful upload of data!"}))
-        .catch(err => res.status(500).json({errorMessage: err}))
+        .catch(err =>{ 
+            console.log(err);
+            return res.status(500).json({errorMessage: err})})
     }
 })
 
 router.put("/:user_id/:date_id", restricted, (req,res) => {
 
-    let user_id = req.params.user_id;
     let date_id = req.params.date_id;
+    console.log(date_id);
+    let dateData = req.body; 
 
-    db.updateDate(user_id,date_id, dateData)
+    db.updateDate(date_id, dateData)
     .then(() => res.status(200).json({message: "Successful upload of data!"}))
     .catch(err => res.status(500).json({errorMessage: "The server has issues uploading data"}))
 })
@@ -69,6 +72,7 @@ router.delete("/:user_id/:date_id", restricted, (req,res) => {
     let user_id = req.params.user_id;
     let date_id = req.params.date_id;
 
+    console.log(date_id);
     db.deleteDate(user_id,date_id)
     .then(() => res.status(200).json({message: "Successful deleting of data!"}))
     .catch(err => res.status(500).json({errorMessage: "The server has issues uploading data"}))
