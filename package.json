@@ -23,6 +23,7 @@
   "author": "Francis Chen <fncis.chen@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "nodemon index.js",
     "server": "nodemon index.js"
   }
 }
