@@ -1,6 +1,6 @@
 const express = require("express");
-const server = express();
 var cors = require('cors')
+const server = express();
 var moment = require('moment');
 
 const http = require('http');
