@@ -5,6 +5,7 @@ const db = require("../data/users/usersDataModel.js");
 const jwt = require('jsonwebtoken');
 var cors = require('cors');
 
+router.use(cors());
 
 router.post("/register", (req,res) => {
     let {username, password} = req.body; 
