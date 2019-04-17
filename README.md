@@ -89,7 +89,7 @@ Note that user_id is automatically incremented, so there is no need to add a use
 
 #### For login with a username and password:
 
-*Get method*: `axios.get(“https://better-friend-server.herokuapp.com/users/login”, userInfo)` 
+*Post method*: `axios.post(“https://better-friend-server.herokuapp.com/users/login”, userInfo)` 
 
 If the **username** and **password** are correct, the server will return a JSON token that allow you access to the dates link specific to each username. 
 
