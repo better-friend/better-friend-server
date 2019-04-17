@@ -4,8 +4,6 @@ const db = require("../data/dates/datesDataModel");
 const restricted = require("../middleware/restrictedMiddleware.js");
 var cors = require('cors')
 
-router.use(cors());
-
 router.get("/:user_id", restricted, (req,res) => {
     let user_id = req.params.user_id;
     
