@@ -53,7 +53,7 @@ Note that user_id and date_id is automatically incremented, so there is no need 
 
 #### To delete an existing date with the ID id, use: 
 
-* *Delete method*:  `axios.delete("https://better-friend-server.herokuapp.com/dates/:username/:id")` 
+* *Delete method*:  `axios.delete("https://better-friend-server.herokuapp.com/dates/:username/:user_id")` 
 
 ## For Users: 
 
