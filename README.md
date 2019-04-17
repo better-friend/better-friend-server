@@ -38,6 +38,8 @@ Example of date JSON object:
 
 Note that user_id and date_id is automatically incremented, so there is no need to add a user_id field on the client end. 
 
+In order to access user_id and username for CRUD methods, after login, you can store user_id and username at localStorage, which you then can retrieve and set to state on your React App.
+
 #### To get all dates by:
 
 * **user id**: *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/")` 
