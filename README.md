@@ -41,8 +41,7 @@ Note that user_id and date_id is automatically incremented, so there is no need 
 #### To get all dates by:
 
 * **user id**: *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/")` 
-* **person name** *Get method*: `axios.get("https://better-friend-server.herokuapp.com/api/dates/:user_id/:person)` 
-* **sent status** *Get method*: `axios.get(URL/api/dates/:user_id/:sent)` 
+* **person name** *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/:person)` 
 
 #### To insert a date with the username, with the JSON object date, use: 
 
