@@ -62,6 +62,8 @@ Note that user_id and date_id is automatically incremented, so there is no need 
 
 ### **Users Database Schema** 
 
+For register and log-in, use these fields. 
+
 | **name**     | **type** | **required** |  **description** |
 |--------------|----------|--------------|------------------|
 |  username    |  string  |     yes      |     username     |
