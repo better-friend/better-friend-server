@@ -49,7 +49,9 @@ router.post("/:user_id", restricted, (req,res) => {
         }
     else {
         db.insertDate(dateData)
-        .then((result) => res.status(200).json({message: "Successful upload of data!"}))
+        .then((result) => {
+        console.log("Success, you have successfully posted your message on the server!")
+        return res.status(200).json(result)})
         .catch(err =>{ 
             console.log(err);
             return res.status(500).json({errorMessage: err})})
