@@ -1,11 +1,21 @@
 const db = require("../dbConfig.js");
 
 module.exports = {
+    getAllUnsentDates,
+    markDateSent,
     getAllDatesByUserId,
     getDatesByPersonName,
     insertDate,
     updateDate,
     deleteDate
+}
+
+function getAllUnsentDates(date){
+    return db("dates").where({date: date, sent: false});
+}
+
+function markDateSent(date_ids){
+    return db("dates").whereIn("date_id", date_ids).update({sent: true });
 }
 
 function getAllDatesByUserId(user_id){
