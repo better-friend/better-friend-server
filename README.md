@@ -45,17 +45,21 @@ In order to access user_id and username for CRUD methods, after login, you can s
 * **user id**: *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/")` 
 * **person name** *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/:person)` 
 
-#### To insert a date with the username, with the JSON object date, use: 
+#### To insert a date with the user ID, user_id, with the JSON object date, use: 
 
 * *Post method*: `axios.post("https://better-friend-server.herokuapp.com/dates/:user_id", date)`
 
-#### To update an existing date with the ID id, insert the JSON object date, and use: 
+If your post is successful, your axios post method will return a date_id.
+
+#### To update an existing date with the user id: user_id & date id: date_id, insert the JSON object date, and use: 
 
 * *Put method*: `axios.put("https://better-friend-server.herokuapp.com/dates/:user_id/:date_id", date)` 
 
-#### To delete an existing date with the ID id, use: 
+If your update is successful, your axios put method will return a date_id. 
 
-* *Delete method*:  `axios.delete("https://better-friend-server.herokuapp.com/dates/:username/:user_id")` 
+#### To delete an existing date with the user id: user_id, & date id: date_id, use: 
+
+* *Delete method*:  `axios.delete("https://better-friend-server.herokuapp.com/dates/:user_id/:date_id")` 
 
 ## For Users: 
 

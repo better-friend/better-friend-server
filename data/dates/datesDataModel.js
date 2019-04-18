@@ -42,9 +42,9 @@ function insertDate(dateData) {
     return db("dates").returning("date_id").insert(dateData);
 }
 
-function updateDate(d_id, dateData) {
+function updateDate(user_id, d_id, dateData) {
 
-    return db("dates").returning("date_id").where({date_id: d_id}).update(dateData);
+    return db("dates").returning("date_id").where({user_id: user_id, date_id: d_id}).update(dateData);
 }
 
 function deleteDate(user_id, date_id) {
