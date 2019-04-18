@@ -8,7 +8,7 @@ exports.seed = function(knex, Promise) {
         {date_id: 1, 
         user_id: 1,
         username: 'john555',
-        date: (new Date()).toString(),
+        date: new Date(),
         personToSendMessageTo: "Lucy",
         phone_number: "555-555-5555",
         message: "Happy Birthday",

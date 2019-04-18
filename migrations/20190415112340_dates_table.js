@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
     table.increments("date_id");
     table.integer("user_id");
     table.string("username").notNull();
-    table.string("date").notNull();
+    table.date("date").notNull();
     table.string("personToSendMessageTo").notNull();
     table.string("phone_number").notNull();
     table.string("message").notNull();
