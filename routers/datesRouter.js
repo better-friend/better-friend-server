@@ -65,7 +65,9 @@ router.put("/:user_id/:date_id", restricted, (req,res) => {
     let dateData = req.body; 
 
     db.updateDate(date_id, dateData)
-    .then(() => res.status(200).json({message: "Successful upload of data!"}))
+    .then((result) => {
+        console.log("Successful update of date!");
+        return res.status(200).json(result);})
     .catch(err => res.status(500).json({errorMessage: "The server has issues uploading data"}))
 })
 
