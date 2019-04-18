@@ -29,5 +29,8 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0"
   }
 }
