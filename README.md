@@ -45,7 +45,7 @@ In order to access user_id and username for CRUD methods, after login, you can s
 * **user id**: *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/")` 
 * **person name** *Get method*: `axios.get("https://better-friend-server.herokuapp.com/dates/:user_id/:person)` 
 
-#### To insert a date with the username ID, with the JSON object date, use: 
+#### To insert a date with the user ID, user_id, with the JSON object date, use: 
 
 * *Post method*: `axios.post("https://better-friend-server.herokuapp.com/dates/:user_id", date)`
 
