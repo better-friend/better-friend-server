@@ -61,10 +61,11 @@ router.post("/:user_id", restricted, (req,res) => {
 router.put("/:user_id/:date_id", restricted, (req,res) => {
 
     let date_id = req.params.date_id;
+    let user_id = req.params.user_id;
     console.log(date_id);
     let dateData = req.body; 
 
-    db.updateDate(date_id, dateData)
+    db.updateDate(user_id, date_id, dateData)
     .then((result) => {
         console.log("Successful update of date!");
         return res.status(200).json(result);})
