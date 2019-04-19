@@ -26,8 +26,8 @@ server.use(express.json());
 
 const port = process.env.PORT || 5000;
 
-server.use("/dates", cors(), datesRouter);
-server.use("/users", cors(), usersRouter);
+server.use("/dates", datesRouter);
+server.use("/users", usersRouter);
 
 server.listen(port, () => {
     console.log("We are in the server!");
