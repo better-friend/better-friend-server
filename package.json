@@ -34,5 +34,8 @@
   },
   "devDependencies": {
     "dotenv": "^7.0.0"
+  },
+  "jest": {
+    "testEnvirnoment": "node"
   }
 }
