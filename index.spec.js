@@ -39,17 +39,23 @@ describe("dates", () => {
 
         response.
         .auth({username:  "john123", password: "blahblahblah"}).
-        send()
+        .expect(200)
+        .end(function(err, res) {
+            if (err) throw err;
+          });
     }
     
     it("should post a message", () => {
-        const response = request(server).post("/dates/:user_id");
+        const response = request(server).post("/dates/:1");
         
         response.
         .auth({username:  "john123", password: "blahblahblah"})
         .send({
-
-
+            date: stripISOTime(new Date()),
+            personToSendMessageTo: "Joe",
+            phone_number: "555-555-5555",
+            message: "Happy Birthday",
+            sent: false
         })
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
@@ -62,13 +68,16 @@ describe("dates", () => {
     }
 
     it("should update a message", () => {
-        const response = request(server).put("/dates/:user_id/:date_id");
+        const response = request(server).put("/dates/:1/:1");
 
         response.
         .auth({username:  "john123", password: "blahblahblah"})
         .send({
-
-
+            date: stripISOTime(new Date()),
+            personToSendMessageTo: "Joe",
+            phone_number: "555-555-5555",
+            message: "Happy Birthday",
+            sent: false
         })
         .set('Accept', 'application/json')
         .expect('Content-Type', /json/)
@@ -80,6 +89,13 @@ describe("dates", () => {
     }
 
     it("should delete a message", () => {
-        const response = request(server).delete("/dates/:user_id/date_id");
+        const response = request(server).delete("/dates/:1/:1");
+        response.end(function(err, res) {
+            if (err) {
+            throw err;
+            }
+            res.should.have.status(200);
+            done();
+    });
     }
 })
